@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e9e7e5;
+    color: #382B25;
+}
+
+.linha {
+    width: 80%;
+    height: 5px;
+    margin: 32px auto;
+    border: none;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #C83E32, #F4C95D);
+}
+
+.divisoria {
+    width: 80%;
+    height: 2px;
+    margin: 18px auto;
+    border: none;
+    background-color: #F4C95D;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 0 32px;
+    background-color: #FFF8EB;
+    box-shadow: 0 6px 12px #0003;
+}
+
+.header h1 {
+    padding-left: 33px;
+    color: #382B25;
+    font: bolder 35px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header nav {
+    display: flex;
+    gap: 22px;
+    margin-left: auto;
+}
+
+.header a {
+    color: #382B25;
+    font-size: 19px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.header a:hover {
+    color: #9F2E27;
+}
+
+.imagem {
+    min-height: 565px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 90px 30px 30px;
+    color: #FFF8EB;
+    text-align: center;
+    background: url("imagens/foto_pizza1.avif") center/cover;
+}
+
+.imagem h2 {
+    margin: 0;
+    color: #FFF8EB;
+    font: bolder clamp(42px, 7vw, 70px) 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.imagem p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.imagem h3 {
+    max-width: 700px;
+    margin: 0;
+    font: 900 17px serif;
+}
+
+.botao {
+    padding: 12px 20px;
+    border-radius: 7px;
+    background: #F4C95D;
+    color: #382B25;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+main {
+    padding: 0 20px 40px;
+}
+
+.categoria {
+    padding-top: 28px;
+    scroll-margin-top: 80px;
+}
+
+
+.txt {
+    margin: 8px auto 22px;
+    text-align: center;
+}
+
+.txt h2 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.txt p {
+    margin: 0;
+    color: #9F2E27;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.card {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    background: #FFF8EB;
+    border: 1px solid #eee4d8;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #382B2515;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scaleY(-3px);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+.desc {
+    padding: 16px;
+}
+
+.desc h3 {
+    margin: 0 0 6px;
+}
+
+.desc p {
+    min-height: 44px;
+    margin: 8px 0 0;
+    color: #74665E;
+    font-size: 14px;
+}
+
+.preco {
+    color: #9F2E27;
+    font-weight: 800;
+}
+
+.historia {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: min(1100px, 100%);
+    margin: 60px auto 20px;
+}
+
+.caixa {
+    width: 50%;
+    padding: 24px;
+    background: #F5F0E6;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px #0003;
+}
+
+.caixa h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.caixa p {
+    margin-bottom: 0;
+    line-height: 1.65;
+}
+
+.cozinha {
+    display: block;
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 25px 0;
+    box-shadow: 0 8px 30px #0003;
+}
+
+.inferior {
+    position: static;
+    background-color: #292929;
+    display: flex;
+    width: 100%;
+    height: 220px;
+    color: #F8F7F3;
+}
+
+.inferior h1 {
+    margin: 55px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    width: 40%;
+}
+
+.inferior h2 {
+    margin: 55px auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.inferior p {
+    margin: 55px auto;
+}
+
+.inferior h3 {
+    margin: 55px auto;
+}
+@media (max-width: 800px) {
+    .grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .historia {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 560px) {
+    .header {
+        gap: 8px;
+        padding: 0 12px;
+    }
+
+    .header h1 {
+        padding-left: 0;
+        font-size: 22px;
+    }
+
+    .header nav {
+        gap: 10px;
+    }
+
+    .header a {
+        font-size: 13px;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .historia {
+        flex-direction: column;
+    }
+
+    .caixa,
+    .cozinha {
+        width: 100%;
+    }
+
+    .cozinha {
+        height: 300px;
+    }
+}
+
+
